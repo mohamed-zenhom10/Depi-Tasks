@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  --oragne: #f4a226;
+  --dark-orange: #e5771f;
+  --brown: #5a3e2b;
+  --green: #76c7ad;
+  --white: #fff;
+  --black: #000;
+  --input: #ffebb3;
+}
+
+h1 {
+  font-family: "Monoton", sans-serif;
+}
+
+.header {
+  background-color: var(--oragne);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 30px 0;
+}
+
+.header h1{
+  font-size: 80px;
+  color: var(--brown);
+}
+
+.header p {
+  font-size: 80px;
+}
+
+.input-data {
+  background-color: var(--dark-orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.input-data p {
+  color: var(--brown);
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.input-data form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-data form input,
+.input-data form select,
+.input-data form button {
+  background-color: var(--input);
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  border-radius: 100px;
+}
+
+.input-data form input::placeholder {
+  font-weight: 600;
+}
+
+.input-data form button {
+  cursor: pointer;
+  background-color: var(--green);
+  width: 100px;
+}
+
+.input-data form select {
+  width: 90px;
+}
+
+.list {
+  background-color: var(--brown);
+  padding: 40px 300px;
+  height: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list .list-items {
+  display: grid;
+  grid-template-columns: repeat(5 , auto);
+  gap: 30px;
+  overflow: scroll;
+  padding: 10px;
+  max-height: 200px;
+}
+
+.list .list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.list .list-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--dark-orange);
+}
+
+.list .list-item p {
+  color: #FFEBB3;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.list .list-item p.complete {
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+.list .list-item button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.list .actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.list .actions select ,
+.list .actions button {
+  background-color: var(--input);
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: var(--green);
+  padding: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 25px;
+  font-style: italic;
+  color: var(--brown);
+  font-weight: 600;
+}

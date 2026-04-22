@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.container {
+  width: 700px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.title {
+  background-color: rgb(151, 26, 151);
+  color: white;
+  padding: 20px;
+}
+
+.title h1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.title .date {
+  font-size: 20px;
+}
+
+.input-data {
+  padding: 25px 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.input-data input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  font-size: 17px;
+}
+
+.input-data button {
+  padding: 10px;
+  background-color: rgb(151, 26, 151);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-data button svg {
+  fill: white;
+}
+
+.tasks {
+  padding: 20px;
+}
+
+.tasks .tasks-status {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #cecece;
+}
+
+.tasks .tasks-status button {
+  background-color: transparent;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: #818181;
+  position: relative;
+}
+
+.tasks .tasks-status button.active {
+  color: rgb(151, 26, 151);
+}
+
+.tasks .tasks-status button.active::before {
+  position: absolute;
+  content: "";
+  background-color: rgb(151, 26, 151);
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  left: 0;
+  bottom: -30px;
+}
+
+.tasks-container {
+  padding-top: 30px;
+}
+
+.tasks-container .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px 0;
+}
+
+.tasks-container .task:not(:last-child) {
+  border-bottom: 1px solid #cecece;
+}
+
+.tasks-container .task .task-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tasks-container .task .task-content input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.tasks-container .task .task-content button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.tasks-container .task .task-content svg{
+  font-size: 24px;
+}
+
+.tasks-container .task .task-content p {
+  font-size: 18px;
+}
+
+.tasks-container .task .task-content p.completed {
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+.tasks-container .task .delete-btn svg {
+  font-size: 24px;
+  cursor: pointer;
+  fill: red;
+}
+
+.footer {
+  margin-top: 10px;
+  border-top: 1px solid #cecece;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #818181;
+}
+
+.footer button {
+  background-color: transparent;
+  color: red;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
